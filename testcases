@@ -1,0 +1,5 @@
+1. Execute the build_script
+2. Open the 127.0.0.1:8000/admin in browser
+3. Login (Username: bai, Password: KUAIle950206)
+4. You can add or revise any blogs here or add users (just privilege users can login now, so for testing, give the new users staff privilege)
+5. After adding, going to 127.0.0.1:8000/blog, we could see all the blogs that we added here
