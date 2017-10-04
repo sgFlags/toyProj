@@ -16,6 +16,7 @@ class Post(models.Model):
     author = models.ForeignKey('auth.User')
     title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=250,
+            unique_for_date='published_date', default='post')
     text = models.TextField()
     created_date = models.DateTimeField(
             auto_now_add=True)
@@ -27,10 +28,9 @@ class Post(models.Model):
             default='draft')
     objects = models.Manager()
     published = PublishedManager()
-    def publish(self):
-        self.published_date = timezone.now()
-        self.save()
         #def publish(self):
+        #self.published_date = timezone.now()
+        #self.save()
 
     def __str__(self):
         return self.title
